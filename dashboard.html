@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Sunday School Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Tiro+Kannada&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+    <!-- Top Student Header Bar -->
+    <header class="navbar dash-nav">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="logo.png" alt="Rehoboth Prayer House HD Logo" class="brand-logo">
+                <div class="brand-text">
+                    <h1>Rehoboth Prayer House</h1>
+                    <p>Student Portal Dashboard</p>
+                </div>
+            </div>
+            <div class="user-profile-nav">
+                <span class="welcome-user"><i class="fa-solid fa-circle-user"></i> ಸುಸ್ವಾಗತ (Welcome Student)</span>
+                <a href="index.html" class="btn btn-logout"><i class="fa-solid fa-power-off"></i> Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container dash-container">
+        
+        <!-- Welcome Hero Banner inside Dashboard -->
+        <div class="dash-welcome-banner">
+            <div>
+                <h2><i class="fa-solid fa-hands-praying"></i> ಶಾಲೋಮ್! ಆನ್‌ಲೈನ್ ಸಂಡೇ ಸ್ಕೂಲ್‌ಗೆ ಸ್ವಾಗತ</h2>
+                <p>ಇಲ್ಲಿ ನಿಮ್ಮ ಎಲ್ಲಾ ಆನ್‌ಲೈನ್ ತರಗತಿಗಳು, ಗೂಗಲ್ ಕ್ಲಾಸ್‌ರೂಮ್, ಆಡಿಯೋ ಬೋಧನೆಗಳು ಮತ್ತು ರಸಪ್ರಶ್ನೆಗಳು ಲಭ್ಯವಿವೆ.</p>
+            </div>
+            <div class="pastor-badge">
+                <p><strong>Pastor:</strong> Pr. Ramesh C</p>
+                <p><i class="fa-solid fa-church"></i> Rehoboth Prayer House</p>
+            </div>
+        </div>
+
+        <!-- Google Classroom Highlight Box -->
+        <div class="classroom-pro-box">
+            <div class="class-header">
+                <i class="fa-solid fa-chalkboard-user class-icon"></i>
+                <div>
+                    <h3><i class="fa-solid fa-graduation-cap"></i> Google Classroom Access / ಗೂಗಲ್ ಕ್ಲಾಸ್‌ರೂಮ್</h3>
+                    <p>ತರಗತಿಯ ಅಸೈನ್‌ಮೆಂಟ್ ಮತ್ತು ಪರೀಕ್ಷೆಗಳಿಗೆ ಕೆಳಗಿನ ಕೋಡ್ ಬಳಸಿ ಜಾಯಿನ್ ಆಗಿ:</p>
+                </div>
+            </div>
+            <div class="code-box-wrapper">
+                <span class="code-title">Class Code:</span>
+                <span class="code-tag">d4gitf5e</span>
+                <button class="btn btn-copy" onclick="navigator.clipboard.writeText('d4gitf5e'); alert('Class Code Copied!');"><i class="fa-solid fa-copy"></i> Copy Code</button>
+            </div>
+            <div class="app-links-row">
+                <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.classroom" target="_blank" class="btn-app-dl android"><i class="fa-brands fa-google-play"></i> Android App Download</a>
+                <a href="https://apps.apple.com/us/app/google-classroom/id924620788" target="_blank" class="btn-app-dl ios"><i class="fa-brands fa-apple"></i> iPhone App Download</a>
+            </div>
+        </div>
+
+        <!-- Full Resource Grid Inside Dashboard -->
+        <h2 class="section-title"><i class="fa-solid fa-folder-open"></i> ಸಂಡೇ ಸ್ಕೂಲ್ ಕಲಿವಿನ ಸಂಪನ್ಮೂಲಗಳು (Sunday School Resources)</h2>
+
+        <div class="resource-pro-grid">
+
+            <!-- Resource 1 -->
+            <div class="res-card-pro">
+                <div class="res-icon-wrapper ppt">
+                    <i class="fa-solid fa-file-powerpoint"></i>
+                </div>
+                <h3>Bible Explorer PPT</h3>
+                <p>66 ಪುಸ್ತಕಗಳ ಸಂಪೂರ್ಣ ಪರಿಚಯ ಮತ್ತು ವಿದ್ಯಾರ್ಥಿಗಳ ಕೈಪಿಡಿ ಸೈಡ್‌ಗಳು.</p>
+                <a href="https://docs.google.com/presentation/d/10JPGheegR0k18oVA-0c4EwrY0awJ6tVS/edit?slide=id.p1#slide=id.p1" target="_blank" class="btn btn-res-action"><i class="fa-solid fa-eye"></i> View PPT / ವೀಕ್ಷಿಸಿ</a>
+            </div>
+
+            <!-- Resource 2 -->
+            <div class="res-card-pro">
+                <div class="res-icon-wrapper film">
+                    <i class="fa-solid fa-film"></i>
+                </div>
+                <h3>JESUS Film (Kannada)</h3>
+                <p>ಯೇಸು ಕ್ರಿಸ್ತರ ಸಂಪೂರ್ಣ ಜೀವನ ಚರಿತ್ರೆಯ ಕನ್ನಡ ಚಲನಚಿತ್ರ visual ಲೆಸನ್.</p>
+                <a href="https://www.jesusfilm.org/watch/jesus.html/kannada.html" target="_blank" class="btn btn-res-action"><i class="fa-solid fa-play"></i> Watch Movie / ವೀಕ್ಷಿಸಿ</a>
+            </div>
+
+            <!-- Resource 3 -->
+            <div class="res-card-pro">
+                <div class="res-icon-wrapper blog">
+                    <i class="fa-solid fa-newspaper"></i>
+                </div>
+                <h3>Sunday Lessons Blog</h3>
+                <p>ವಾರದ ಪಾಠಗಳು ಮತ್ತು ಪ್ರಶ್ನೋತ್ತರ ಲೇಖನಗಳ ಬ್ಲಾಗ್ ಸಂಪರ್ಕ.</p>
+                <a href="https://ipcrehobothmadapura.blogspot.com/2026/08/blog-post.html" target="_blank" class="btn btn-res-action"><i class="fa-solid fa-book-open"></i> Read Blog / ಓದಿ</a>
+            </div>
+
+            <!-- Resource 4 -->
+            <div class="res-card-pro">
+                <div class="res-icon-wrapper audio">
+                    <i class="fa-solid fa-headphones"></i>
+                </div>
+                <h3>Audio Lessons (ICM)</h3>
+                <p>ಆತ್ಮಿಕ ಬೆಳವಣಿಗೆಗಾಗಿ ಪ್ರತಿದಿನದ ಕನ್ನಡ ಆಡಿಯೋ ಬೋಧನೆಗಳು.</p>
+                <a href="https://foundations.icm.org/kannada-audio-lessons/" target="_blank" class="btn btn-res-action"><i class="fa-solid fa-volume-high"></i> Listen Audio / ಕೇಳಿ</a>
+            </div>
+
+            <!-- Resource 5 (New Sunday School Extra Resource) -->
+            <div class="res-card-pro">
+                <div class="res-icon-wrapper songs">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+                <h3>Sunday School Action Songs</h3>
+                <p>ಮಕ್ಕಳಿಗಾಗಿ ಕನ್ನಡ ಸಂಡೇ ಸ್ಕೂಲ್ ಆಕ್ಷನ್ ಸಾಂಗ್ಸ್ & ಹಾಡುಗಳ ಸಾಲುಗಳು.</p>
+                <a href="https://www.youtube.com/results?search_query=kannada+christian+sunday+school+action+songs" target="_blank" class="btn btn-res-action"><i class="fa-solid fa-music"></i> Sing & Learn / ಹಾಡಿ ಕಲಿಯಿರಿ</a>
+            </div>
+
+            <!-- Resource 6 (New Sunday School Quiz) -->
+            <div class="res-card-pro">
+                <div class="res-icon-wrapper quiz">
+                    <i class="fa-solid fa-circle-question"></i>
+                </div>
+                <h3>Weekly Bible Quiz</h3>
+                <p>ವಾರದ ಬೈಬಲ್ ರಸಪ್ರಶ್ನೆ ಭಾಗವಹಿಸಿ ಮತ್ತು ಸರ್ಟಿಫಿಕೇಟ್ ಗೆಲ್ಲಿರಿ.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1QuwCNY2MF_fFms0u-FgnDulqkdijVAHPLi20Cj7-AmVXNw/viewform" target="_blank" class="btn btn-res-action"><i class="fa-solid fa-pen"></i> Take Quiz / ರಸಪ್ರಶ್ನೆ</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Dashboard Footer -->
+    <footer>
+        <p>&copy; 2026 Rehoboth Prayer House | Student Online Portal</p>
+    </footer>
+
+</body>
+</html>

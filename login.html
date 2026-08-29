@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login | Sunday School Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Tiro+Kannada&display=swap" rel="stylesheet">
+    <style>
+        .auth-container {
+            max-width: 450px;
+            margin: 60px auto;
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+        .btn-auth {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--secondary-blue);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .auth-footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="logo.png" alt="Rehoboth Prayer House HD Logo" class="brand-logo">
+                <div class="brand-text">
+                    <h1>Rehoboth Prayer House</h1>
+                    <p>Sunday School Login</p>
+                </div>
+            </div>
+            <a href="index.html" class="btn btn-login-nav"><i class="fa-solid fa-house"></i> Home</a>
+        </div>
+    </header>
+
+    <div class="auth-container">
+        <img src="logo.png" style="width: 70px; margin-bottom: 15px;" alt="Logo">
+        <h2>ವಿದ್ಯಾರ್ಥಿ ಲಾಗಿನ್ (Student Login)</h2>
+        <p style="color: var(--text-muted); margin-bottom: 25px;">ನಿಮ್ಮ ಆನ್‌ಲೈನ್ ತರಗತಿಗಳಿಗೆ ಪ್ರವೇಶಿಸಿ</p>
+        
+        <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+            <div class="form-group">
+                <label><i class="fa-solid fa-envelope"></i> ಇಮೇಲ್ ಅಥವಾ ಫೋನ್ ಸಂಖ್ಯೆ</label>
+                <input type="text" class="form-control" placeholder="Enter Email or Phone Number" required>
+            </div>
+            <div class="form-group">
+                <label><i class="fa-solid fa-lock"></i> ಪಾಸ್‌ವರ್ಡ್ (Password)</label>
+                <input type="password" class="form-control" placeholder="Enter Password" required>
+            </div>
+            <button type="submit" class="btn-auth"><i class="fa-solid fa-right-to-bracket"></i> Login / ಪ್ರವೇಶಿಸಿ</button>
+        </form>
+
+        <div class="auth-footer">
+            <p>ಖಾತೆ ಇಲ್ಲವೇ? <a href="signup.html" style="color: var(--secondary-blue); font-weight: 600;">ಇಲ್ಲಿ ಸೈನ್ ಅಪ್ ಮಾಡಿ (Sign Up)</a></p>
+        </div>
+    </div>
+</body>
+</html>
