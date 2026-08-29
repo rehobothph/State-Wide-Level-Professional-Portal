@@ -45,14 +45,31 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 10px;
     font-weight: bold;
-    font-size: 1.05rem;
+    font-size: 1rem;
     transition: color 0.3s;
 }
 
 nav a:hover {
     color: #f59e0b;
+}
+
+/* Nav Buttons */
+.nav-btn {
+    padding: 6px 14px;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.login-btn {
+    background-color: #2563eb;
+    color: white !important;
+}
+
+.signup-btn {
+    background-color: #16a34a;
+    color: white !important;
 }
 
 .container {
@@ -92,20 +109,39 @@ nav a:hover {
     border: 1px solid #bfdbfe;
 }
 
+.account-box {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+.btn-group {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
 .btn-link {
     display: inline-block;
     background-color: #f59e0b;
     color: white;
-    padding: 12px 24px;
+    padding: 12px 20px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 6px;
-    margin-top: 15px;
     transition: background-color 0.3s;
 }
 
+.login-main-btn {
+    background-color: #2563eb;
+}
+
+.signup-main-btn {
+    background-color: #16a34a;
+}
+
 .btn-link:hover {
-    background-color: #d97706;
+    opacity: 0.9;
 }
 
 .timing-item {
