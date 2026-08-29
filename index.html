@@ -3,45 +3,361 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rehoboth Prayer House - Madapura</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Rehoboth Prayer House | Online Sunday School</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Tiro+Kannada&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0d3b2e;
+            --secondary-color: #d4af37;
+            --light-bg: #f4f7f6;
+            --text-dark: #2c3e50;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', 'Tiro Kannada', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #051d16);
+            color: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--secondary-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            width: 140px;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid var(--secondary-color);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        header h1 {
+            font-size: 28px;
+            color: var(--secondary-color);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        header h2 {
+            font-size: 20px;
+            margin-top: 5px;
+            font-weight: 400;
+        }
+
+        header p {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-top: 3px;
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* CARDS */
+        .card {
+            background: var(--white);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h3 i {
+            color: var(--secondary-color);
+        }
+
+        /* BIBLE VERSE BOX */
+        .verse-box {
+            background-color: #eaf4f0;
+            border-left: 5px solid var(--primary-color);
+            padding: 18px;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 16px;
+            margin: 15px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .verse-author {
+            display: block;
+            margin-top: 8px;
+            font-weight: 600;
+            font-style: normal;
+            color: var(--primary-color);
+            text-align: right;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary-color), #b89528);
+            color: var(--primary-color);
+            padding: 12px 25px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 15px;
+            margin-top: 10px;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #b89528, var(--secondary-color));
+            color: var(--white);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* GOOGLE CLASSROOM CODE */
+        .code-container {
+            text-align: center;
+            background: #f0f7f4;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px dashed var(--primary-color);
+            margin-top: 10px;
+        }
+
+        .code-box {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            font-size: 24px;
+            font-weight: bold;
+            padding: 8px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            letter-spacing: 3px;
+            margin-top: 5px;
+        }
+
+        /* RESOURCE LIST */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .resource-item {
+            background: #f9fdfb;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #e1ebe6;
+            text-align: center;
+        }
+
+        .resource-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        /* CONTACT SECTION */
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #051d16;
+            color: var(--white);
+            padding: 25px 15px;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 40px;
+            border-top: 3px solid var(--secondary-color);
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
+    <!-- HEADER / LOGO SECTION -->
     <header>
-        <h1>Rehoboth Prayer House</h1>
-        <p>ಮಾಡಪುರ, ಕರ್ನಾಟಕ</p>
+        <div class="header-container">
+            <img src="logo.jpg" alt="Rehoboth Prayer House Logo" class="logo">
+            <h1>REHOBOTH PRAYER HOUSE</h1>
+            <h2>Online Sunday School | ಸಂಡೇ ಸ್ಕೂಲ್ ಆನ್‌ಲೈನ್</h2>
+            <p>Madapura, Karnataka</p>
+        </div>
     </header>
 
-    <nav>
-        <a href="#about">ನಮ್ಮ ಬಗ್ಗೆ</a>
-        <a href="#timings">ಪ್ರಾರ್ಥನಾ ಸಮಯ</a>
-        <a href="#contact">ಸಂಪರ್ಕಿಸಿ</a>
-    </nav>
+    <div class="container">
 
-    <div class="container section" id="about">
-        <h2>ಸ್ವಾಗತ</h2>
-        <p>ರೆಹೋಬೋತ್ ಪ್ರೇಯರ್ ಹೌಸ್ ಮಾಡಪುರದಲ್ಲಿ ದೇವರ ವಾಕ್ಯವನ್ನು ಸಾರುವ ಮತ್ತು ಪ್ರಾರ್ಥನೆಯ ಮೂಲಕ ಆತ್ಮಿಕ ಬಲವನ್ನು ಪಡೆಯುವ ಸ್ಥಳವಾಗಿದೆ. ನಮ್ಮೊಂದಿಗೆ ಸೇರಿ ದೇವರ ಆಶೀರ್ವಾದ ಪಡೆಯಿರಿ.</p>
-    </div>
-
-    <div class="container section highlight-box" id="timings">
-        <h2>ಪ್ರಾರ್ಥನಾ ಸಮಯಗಳು</h2>
-        <div><strong>ಭಾನುವಾರ:</strong> ಬೆಳಿಗ್ಗೆ 9:00</div>
-        <div><strong>ಸಂಡೇ ಸ್ಕೂಲ್:</strong> ಬೆಳಿಗ್ಗೆ 8:00</div>
-        <div><strong>ಶುಕ್ರವಾರ:</strong> ಸಾಯಂಕಾಲ 6:30</div>
-    </div>
-
-    <section id="contact" class="container section">
-        <h2>ಸಂಪರ್ಕಿಸಿ</h2>
-        <div class="contact-box">
-            <p><strong>ಪಾಸ್ಟರು:</strong> Pr. Ramesha C</p>
-            <p><strong>ಫೋನ್:</strong> +91 7353609920</p>
-            <p><strong>ಸ್ಥಳ:</strong> ಮಾಡಪುರ, ಕರ್ನಾಟಕ</p>
+        <!-- 📖 BIBLE VERSE FOR KIDS -->
+        <div class="card">
+            <h3><i class="fa-solid fa-book-bible"></i> ಪ್ರೋತ್ಸಾಹದ ಬೈಬಲ್ ವಾಕ್ಯಗಳು</h3>
+            <div class="verse-box">
+                "ಯೇಸು: 'ಮಕ್ಕಳನ್ನು ನನ್ನ ಬಳಿಗೆ ಬರಗೊಡಿರಿ, ಅವರನ್ನು ತಡೆಯಬೇಡಿರಿ; ಪರಲೋಕ ರಾಜ್ಯವು ಇಂಥವರದ್ದೇ' ಅಂದನು."
+                <span class="verse-author">— ಮತ್ತಾಯ 19:14</span>
+            </div>
+            <div class="verse-box">
+                "ನನಗೆ ಶಕ್ತಿಯನ್ನು ಕೊಡುವ ಕ್ರಿಸ್ತನ ಮೂಲಕ ನಾನು ಎಲ್ಲವನ್ನೂ ಮಾಡಬಲ್ಲೆ."
+                <span class="verse-author">— ಫಿಲಿಪ್ಪಿಯರಿಗೆ 4:13</span>
+            </div>
         </div>
-    </section>
 
+        <!-- 📝 REGISTRATION -->
+        <div class="card">
+            <h3><i class="fa-solid fa-pen-to-square"></i> ಸಂಡೇ ಸ್ಕೂಲ್ ನೋಂದಣಿ (Registration)</h3>
+            <p>ಪ್ರಿಯ ಮಕ್ಕಳೇ ಮತ್ತು ಪೋಷಕರೇ, ನಮ್ಮ ಸಂಡೇ ಸ್ಕೂಲ್ ತರಗತಿಗಳಿಗೆ ಸೇರಲು ಆನ್‌ಲೈನ್ ಫಾರ್ಮ್ ಭರ್ತಿ ಮಾಡಿ:</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1QuwCNY2MF_fFms0u-FgnDulqkdijVAHPLi20Cj7-AmVXNw/viewform" target="_blank" class="btn">
+                <i class="fa-solid fa-user-plus"></i> ಇಲ್ಲಿ ನೋಂದಾಯಿಸಿ (Register Now)
+            </a>
+        </div>
+
+        <!-- 🏫 GOOGLE CLASSROOM CODE -->
+        <div class="card">
+            <h3><i class="fa-solid fa-graduation-cap"></i> Google Classroom</h3>
+            <p>ಆನ್‌ಲೈನ್ ಸಂಡೇ ಸ್ಕೂಲ್ ತರಗತಿಗಳಿಗೆ ಸೇರಲು ಕೆಳಗಿನ ಕೋಡ್ ಬಳಸಿ:</p>
+            <div class="code-container">
+                <div>Classroom Code:</div>
+                <div class="code-box">d4gitf5e</div>
+            </div>
+        </div>
+
+        <!-- 📚 STUDY RESOURCES -->
+        <div class="card">
+            <h3><i class="fa-solid fa-folder-open"></i> ಮಕ್ಕಳ ಕಲಿವಿನ ಸಂಪನ್ಮೂಲಗಳು (Study Resources)</h3>
+            <div class="resource-grid">
+                
+                <div class="resource-item">
+                    <h4>📖 ಬೈಬಲ್ ಅನ್ವೇಷಕನ ಪಯಣ</h4>
+                    <p>66 ಪುಸ್ತಕಗಳ ಪರಿಚಯ & Presentation</p>
+                    <a href="https://docs.google.com/presentation/d/10JPGheegR0k18oVA-0c4EwrY0awJ6tVS/edit?slide=id.p1#slide=id.p1" target="_blank" class="btn btn-outline">
+                        <i class="fa-solid fa-file-powerpoint"></i> PPT ವೀಕ್ಷಿಸಿ
+                    </a>
+                </div>
+
+                <div class="resource-item">
+                    <h4>🎬 JESUS Film (ಕನ್ನಡ)</h4>
+                    <p>ಯೇಸು ಕ್ರಿಸ್ತರ ಉಚಿತ ಚಲನಚಿತ್ರ</p>
+                    <a href="https://www.jesusfilm.org/watch/jesus.html/kannada.html" target="_blank" class="btn btn-outline">
+                        <i class="fa-solid fa-video"></i> ಸಿನಿಮಾ ವೀಕ್ಷಿಸಿ
+                    </a>
+                </div>
+
+                <div class="resource-item">
+                    <h4>📝 ಯೇಸು ಕ್ರಿಸ್ತನ ಪೂರ್ಣ ಜೀವನ</h4>
+                    <p>ಬ್ಲಾಗ್‌ನಲ್ಲಿ ಲಭ್ಯವಿರುವ ಲೇಖನಗಳು</p>
+                    <a href="https://ipcrehobothmadapura.blogspot.com/2026/08/blog-post.html" target="_blank" class="btn btn-outline">
+                        <i class="fa-solid fa-newspaper"></i> ಲೇಖನ ಓದಿ
+                    </a>
+                </div>
+
+                <div class="resource-item">
+                    <h4>🎧 ICM Audio Lessons</h4>
+                    <p>ಕನ್ನಡ ಆಡಿಯೋ ಪಾಠಗಳು</p>
+                    <a href="https://foundations.icm.org/kannada-audio-lessons/" target="_blank" class="btn btn-outline">
+                        <i class="fa-solid fa-headphones"></i> ಆಡಿಯೋ ಕೇಳಿ
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 🌐 MAIN CHURCH WEBSITE LINK -->
+        <div class="card" style="text-align: center;">
+            <h3><i class="fa-solid fa-church"></i> Main Church Website</h3>
+            <p>ನಮ್ಮ ಚರ್ಚ್‌ನ ಅಧಿಕೃತ ಮುಖ್ಯ ವೆಬ್‌ಸೈಟ್‌ಗೆ ಭೇಟಿ ನೀಡಲು ಕೆಳಗಿನ ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ:</p>
+            <a href="https://rehobothph.github.io/rehoboth-prayer-house/" target="_blank" class="btn">
+                <i class="fa-solid fa-globe"></i> Visit Official Church Website
+            </a>
+        </div>
+
+        <!-- 📞 CONTACT & OFFICIAL DETAILS -->
+        <div class="card contact-info">
+            <h3><i class="fa-solid fa-address-book"></i> ಸಂಪರ್ಕಿಸಿ (Contact Us)</h3>
+            <p><strong><i class="fa-solid fa-user-tie"></i> Pastor:</strong> Pr. Ramesh C</p>
+            <p><strong><i class="fa-solid fa-location-dot"></i> Location:</strong> Rehoboth Prayer House, Madapura, Karnataka</p>
+            <p><strong><i class="fa-solid fa-envelope"></i> Email:</strong> rehobothprayerhouseofficial@gmail.com</p>
+            
+            <div class="contact-buttons">
+                <a href="tel:7353609920" class="btn btn-outline"><i class="fa-solid fa-phone"></i> Call: 7353609920</a>
+                <a href="https://wa.me/917353609920" target="_blank" class="btn btn-outline" style="border-color: #25D366; color: #25D366;"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+                <a href="mailto:rehobothprayerhouseofficial@gmail.com" class="btn btn-outline"><i class="fa-solid fa-envelope"></i> Send Email</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Rehoboth Prayer House | Madapura. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.</p>
+        <p>© 2026 Rehoboth Prayer House, Madapura. All Rights Reserved.</p>
+        <p style="margin-top: 5px;"><a href="https://rehobothph.github.io/rehoboth-prayer-house/" target="_blank">Rehoboth Official Website</a> | Sunday School Ministry</p>
     </footer>
 
 </body>
